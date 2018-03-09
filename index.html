@@ -1,1 +1,393 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>OpenSecurity - Security Training, Security Engineering, Pentest, Code Review, and Research</title>
+      <meta name="description" content="We do quality pentests, code review, security engineering, security training and security research">
+      <meta name="keywords" content="opensecurity, ajin abraham, opsecx, security, security training, code review, pentests, security engineering, security research, security assessment, mobile security, web security, android security, ios security, window exploit development, application security, security tool" />
+      <link rel="canonical" href="https://opensecurity.in" />
+      <link rel="shortcut icon" href="/static/img/favicon.ico">
+      <meta name="google-site-verification" content="uT4U0akjrFp8OFYPpOFdiW_DtVBN7WTj77tyRU2agic" />
+      <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+      <link href="https://fonts.googleapis.com/css?family=Space+Mono:700,700i|Roboto:300,300i" rel="stylesheet">
+
+      <meta property="og:site_name" content="OpenSecurity"/>
+      <meta property="og:title" content="OpenSecurity"/>
+      <meta property="og:url" content="https://opensecurity.in"/>
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content="We do quality pentests, code review, security engineering, security training and security research"/>
+      <meta property="og:image" content="/static/img/opensecurity-logo.png"/>
+     
+      <meta charset="utf-8">
+      <meta name="twitter:site" content="OpenSecurity" />
+      <meta name="twitter:card" content="OpenSecurity" />
+      <meta name="twitter:description" content="We do quality pentests, code review, security engineering, security training and security research" />
+      <meta name="twitter:title" content="OpenSecurity" />
+
+   </head>
+   <body>
+      <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <symbol id="icon-search" viewBox="0 0 32 32">
+            <title>search</title>
+            <path class="path1" d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12c2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
+         </symbol>
+         <symbol id="icon-facebook" viewBox="0 0 32 32">
+            <title>facebook</title>
+            <path class="path1" d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+         </symbol>
+         <symbol id="icon-twitter" viewBox="0 0 32 32">
+            <title>twitter</title>
+            <path class="path1" d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+         </symbol>
+         <symbol id="icon-youtube" viewBox="0 0 32 32">
+            <title>youtube</title>
+            <path class="path1" d="M31.681 9.6c0 0-0.313-2.206-1.275-3.175-1.219-1.275-2.581-1.281-3.206-1.356-4.475-0.325-11.194-0.325-11.194-0.325h-0.012c0 0-6.719 0-11.194 0.325-0.625 0.075-1.987 0.081-3.206 1.356-0.963 0.969-1.269 3.175-1.269 3.175s-0.319 2.588-0.319 5.181v2.425c0 2.587 0.319 5.181 0.319 5.181s0.313 2.206 1.269 3.175c1.219 1.275 2.819 1.231 3.531 1.369 2.563 0.244 10.881 0.319 10.881 0.319s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.356 0.962-0.969 1.275-3.175 1.275-3.175s0.319-2.587 0.319-5.181v-2.425c-0.006-2.588-0.325-5.181-0.325-5.181zM12.694 20.15v-8.994l8.644 4.513-8.644 4.481z"></path>
+         </symbol>
+         <symbol id="icon-linkedin" viewBox="0 0 32 32">
+            <title>linkedin</title>
+            <path class="path1" d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z"></path>
+         </symbol>
+      </svg>
+      <!-- Side Nav -->
+      <ul class="vertical-nav" data-magellan data-active-class="active" data-bar-offset="-25"  >
+         <li>
+            <a href="#intro">
+            <span class="dot"></span>
+            <span class="label">Home</span>
+            </a>
+         </li>
+         <li>
+            <a href="#training">
+            <span class="dot"></span>
+            <span class="label">Training</span>
+            </a>
+         </li>
+         <li>
+            <a href="#pentests">
+            <span class="dot"></span>
+            <span class="label">Pentest</span>
+            </a>
+         </li>
+         <li>
+            <a href="#engineering">
+            <span class="dot"></span>
+            <span class="label">Engineering</span>
+            </a>
+         </li>
+         <li>
+            <a href="#research">
+            <span class="dot"></span>
+            <span class="label">Research</span>
+            </a>
+         </li>
+         <li>
+            <a href="#clients">
+            <span class="dot"></span>
+            <span class="label">Clients</span>
+            </a>
+         </li>
+         <li>
+            <a href="#contact">
+            <span class="dot"></span>
+            <span class="label">Contact</span>
+            </a>
+         </li>
+      </ul>
+      <!-- end index page vertical nav -->
+      <main class="main">
+         <!-- home -->
+         <header class="section" id="intro" data-magellan-target="intro" data-deep-linking="true"  >
+            <div class="container vert-center">
+               <div class="content">
+                  
+                  <h1 class="hero"><span class="highlight"><img width="12%" height="12%" src="/static/img/opensecurity-icon.png">Open</span>Security.</h1>
+                  <h4 class="subheader">We do quality pentests, security engineering, </br>security training and we <font color="red">♥</font> OpenSource.</h4>
+                  <section>
+                  <div id="icon-wrapper">
+                    <a href="#training">
+                      <div class="icons">
+                        <div class="icon-slide-container">
+                          <img class="slide-icon"  alt="Security Training" height="100" src="/static/img/training.jpg">
+                          </div>
+                        </div>
+                      </a>
+                      
+                      <a href="#pentests">
+                        <div class="icons2">
+                          <div class="icon-slide-container">
+                            <img class="slide-icon"  alt="Pentests and Code Review" height="100" src="/static/img/pentests.jpg">
+                            </div>
+                          </div>
+                        </a>
+                        
+                        <a href="#engineering">
+                          <div class="icons3">
+                            <div class="icon-slide-container">
+                              <img class="slide-icon"  alt="Security Engineering and OpenSource" height="100" src="/static/img/opensource.jpg">
+                              </div>
+                            </div>
+                          </a>
+                          
+                          <a href="#research">
+                            <div class="icons4">
+                              <div class="icon-slide-container">
+                                <img class="slide-icon"  alt="Security Research" height="100" src="/static/img/research.jpg">
+                                </div>
+                              </div>
+                            </a>
+                      </div>
+                  </section>
+               </div>
+            </div>
+         </header>
+         <!-- end home -->
+         
+         <!-- training -->
+         <section class="section" id="training" data-magellan-target="training"  >
+            <div class="container">
+               <div class="content">
+                  <h1 class="hero content-title"><span class="highlight">Security Training</span></h1>
+                  <div class="about-body">
+                     <p class="content-lead">Deep technical application security trainings. </p>
+                     
+                     <p class="content-main">
+
+                     We provide application security trainings and certification via self paced online courses as well as hands on live trainings at Security conferences. We deliver trainings on web application security, mobile application security, pentesting modern technology stack, and windows exploit development. For more information, visit our security education portal<a href="https://opsecx.com"><img src="/static/img/opsecx.png"></a>
+                     </p>
+                     </p></p>
+                     <p align="center">
+                     <a target="_blank" href="https://opsecx.com/" class="button blue">Live Trainings</a>
+                     <a target="_blank" href="https://opsecx.com/index.php/all-courses/" class="button blue">Online Trainings</a>
+                     </p>                     
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- end training -->
+
+         <!-- pentests and code review -->
+         <section class="section" id="pentests" data-magellan-target="pentests">
+            <div class="container">
+               <div class="content">
+                  <h1 class="hero content-title"><span class="highlight">Pentest &amp; Code Review</span></h1>
+                  <div class="about-body">
+                     <p class="content-lead">In God we trust; rest we test. </p>
+                     
+                     <p class="content-main">
+                     We find security vulnerabilities in web application, web services, frameworks, mobile applications built for Android, iOS and software written for Internet of things (IoT). We do comprehensive security assessments that include threat analysis, architectural reviews, pentesting and source code review. Contact us for more details.
+                     </p>                     
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- end pentests and code review -->
+
+        <!-- engineering -->
+         <section class="section" id="engineering" data-magellan-target="engineering">
+            <div class="container">
+               <div class="content">
+                  <h1 class="hero content-title"><span class="highlight">Security Engineering</span></h1>
+
+                  <div class="about-body">
+                  <p class="content-lead">We love security automation and develops security tools that work.</p>
+                  <p class="content-main">Security Engineering is our speciality. We build security tools in Python, Golang, Lua, Node.js, .NET, JavaScript and Java.  <a class="button orange" href="https://github.com/OpenSecurityIN">GitHub <span class="fa fa-github"></span></a>
+                      </div></p>
+                  <article class="card" data-gh-project="MobSF/Mobile-Security-Framework-MobSF">
+                  <header class="card-header">
+                    <p class="card-suptitle">On <a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF" title="View on GitHub">GitHub</a></p>
+                    <h1 class="card-title"><a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF" title="Mobile Security Framework" >Mobile Security Framework - MobSF</a></h1>
+                  </header>
+                  <div class="card-body">
+                    <dl class="card-details">
+                      <dt>Forked</dt>
+                      <dd class="fork"><a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF/fork" title="View fork details"></a></dd>
+                      <dt>Starred</dt>
+                      <dd class="star"><a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF/stargazers" title="View fork details"></a></dd>
+                    </dl>
+                  </div>
+                </article>
+
+                <article class="card" data-gh-project="ajinabraham/NodeJsScan">
+                  <header class="card-header">
+                    <p class="card-suptitle">On <a href="https://github.com/ajinabraham/NodeJsScan" title="View on GitHub">GitHub</a></p>
+                    <h1 class="card-title"><a href="https://github.com/ajinabraham/NodeJsScan" title="NodeJsScan">NodeJsScan Static Code Scanner</a></h1>
+                  </header>
+                  <div class="card-body">
+                    <dl class="card-details">
+                      <dt>Forked</dt>
+                      <dd class="fork"><a href="https://github.com/ajinabraham/NodeJsScan/fork" title="View fork details"></a></dd>
+                      <dt>Starred</dt>
+                      <dd class="star"><a href="https://github.com/ajinabraham/NodeJsScan/stargazers " title="View fork details"></a></dd>
+                    </dl>
+                  </div>
+                </article>
+
+                <article class="card" data-gh-project="ajinabraham/OWASP-Xenotix-XSS-Exploit-Framework">
+                  <header class="card-header">
+                    <p class="card-suptitle">On <a href="https://github.com/ajinabraham/OWASP-Xenotix-XSS-Exploit-Framework"  title="View on GitHub">GitHub</a></p>
+                    <h1 class="card-title"><a href="https://xenotix.in/" title="OWASP Xenotix XSS Exploit Framework">OWASP Xenotix XSS Exploit Framework</a></h1>
+                  </header>
+                  <div class="card-body">
+                    <dl class="card-details">
+                      <dt>Forked</dt>
+                      <dd class="fork"><a href="https://github.com/ajinabraham/OWASP-Xenotix-XSS-Exploit-Framework/fork" title="View fork details"></a></dd>
+                      <dt>Starred</dt>
+                      <dd class="star"><a href="https://github.com/ajinabraham/OWASP-Xenotix-XSS-Exploit-Framework/stargazers " title="View fork details"></a></dd>
+                    </dl>
+                  </div>
+                </article>
+                <article class="card" data-gh-project="torque59/Garfield">
+                  <header class="card-header">
+                    <p class="card-suptitle">On <a href="https://github.com/torque59/Garfield"  title="View on GitHub">GitHub</a></p>
+                    <h1 class="card-title"><a href="https://github.com/torque59/Garfield" title="Garfield">Garfield Distributed System Scanner</a></h1>
+                  </header>
+                  <div class="card-body">
+                    <dl class="card-details">
+                      <dt>Forked</dt>
+                      <dd class="fork"><a href="https://github.com/torque59/Garfield/fork" title="View fork details"></a></dd>
+                      <dt>Starred</dt>
+                      <dd class="star"><a href="https://github.com/torque59/Garfield/stargazers" title="View fork details"></a></dd>
+                    </dl>
+                  </div>
+                </article>
+                <article class="card" data-gh-project="torque59/Nosql-Exploitation-Framework">
+                  <header class="card-header">
+                    <p class="card-suptitle">On <a href="https://github.com/torque59/Nosql-Exploitation-Framework"  title="View on GitHub">GitHub</a></p>
+                    <h1 class="card-title"><a href="http://nosqlproject.com/">NoSQL Exploitation Framework</a></h1>
+                  </header>
+                  <div class="card-body">
+                    <dl class="card-details">
+                      <dt>Forked</dt>
+                      <dd class="fork"><a href="https://github.com/torque59/Nosql-Exploitation-Framework/fork" title="View fork details"></a></dd>
+                      <dt>Starred</dt>
+                      <dd class="star"><a href="https://github.com/torque59/Nosql-Exploitation-Framework/stargazers" title="View fork details"></a></dd>
+                    </dl>
+                  </div>
+                </article>
+                <article class="card" data-gh-project="tunnelshade/nightfury">
+                  <header class="card-header">
+                    <p class="card-suptitle">On <a href="https://github.com/tunnelshade/nightfury"  title="View on GitHub">GitHub</a></p>
+                    <h1 class="card-title"><a href="https://github.com/tunnelshade/nightfury">Nightfury, ML in Offensive AppSec</a></h1>
+                  </header>
+                  <div class="card-body">
+                    <dl class="card-details">
+                      <dt>Forked</dt>
+                      <dd class="fork"><a href="https://github.com/tunnelshade/nightfury/fork" title="View fork details"></a></dd>
+                      <dt>Starred</dt>
+                      <dd class="star"><a href="https://github.com/tunnelshade/nightfury/stargazers" title="View fork details"></a></dd>
+                    </dl>
+                  </div>
+                </article> 
+               </div>
+            </div>
+         </section>
+         <!-- end engineering-->
+
+         <!-- research -->
+         <section class="section" id="research" data-magellan-target="research"  >
+            <div class="container">
+               <div class="content">
+                  <h1 class="hero content-title"><span class="highlight">Research</span></h1>
+                  <div class="about-body">
+                     <p class="content-lead">Latest advisories and research from OpenSecurity.</p>
+                     <ul>
+                     <h5>
+                     <li> <a href="https://ajinabraham.com/blog/exploiting-insecure-file-extraction-in-python-for-code-execution">Exploiting insecure file extraction in Python for code execution</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/exploiting-deserialization-bugs-in-nodejs-modules-for-remote-code-execution">Exploiting deserialization bugs in Node.js modules for Remote Code Execution</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/server-side-template-injection-in-tornado">Server Side Template Injection in Tornado</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/instamojo-woocommerce-plugin-xss">Instamojo Woocommerce Plugin XSS</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/os-x-mavericks-1095-out-of-bound-readwrite-in-memmove">OS X Mavericks 10.9.5 – out of bound read/write in memmove()</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/applock-mitm-password-reset-vulnerability">AppLock MITM Password Reset Vulnerability</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/reversing-dexguard-string-encryption">Reversing DexGuard’s String Encryption</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/bypassing-content-security-policy-with-a-jsgif-polyglot">Bypassing Content Security Policy with a JS/GIF Polyglot</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/bypassing-pin-in-whisper-android-application">Bypassing PIN in Whisper Android Application</a></li>
+                     <li> <a href="hhttps://ajinabraham.com/blog/tizen-221-webkit-address-spoofing">Tizen 2.2.1 WebKit Address Spoofing</a></li>
+                     <li> <a href="https://ajinabraham.com/blog/mts-mblaze-ultra-wi-fi-zte-ac3633-multiple-vulnerabilities">MTS MBlaze Ultra Wi-Fi / ZTE AC3633 Multiple Vulnerabilities</a></li>
+
+                     </h5>
+                     </ul>
+                      <div align="center">
+                      <a href="https://twitter.com/OpenSecurity_IN" class="button orange">Follow @OpenSecurity_IN</a>
+                      </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- end research -->
+
+         <!-- clients -->
+         <section class="section" id="clients" data-magellan-target="clients"  >
+            <div class="container">
+               <div class="content">
+                  <h1 class="hero content-title">Some of our <span class="highlight">clients</span>.</h1>
+                  <ul class="clients">
+                     <li><img src="/static/img/clients/fulllab_logo.png" alt="Fulllab"></li>
+                     <li><img src="/static/img/clients/immunio_logo.png" alt="IMMUNIO"></li>
+                     <li><img src="/static/img/clients/sysdream.png" alt="SYSDREAM"></li>
+                     <li><img src="/static/img/clients/continuum_logo.png" alt="Continuum Security"></li>
+                     <li><img src="/static/img/clients/yodlee.png" alt="Envestnet Yodlee"></li>  
+                  </ul>
+               </div>
+            </div>
+         </section>
+         <!-- end clients -->
+
+         <!-- Contact -->
+         <section class="section" id="contact" data-magellan-target="contact">
+            <div class="container">
+               <div class="content">
+                  <h1 class="hero content-title">We'd like to do business with you!</h1>
+                  <h4>Have a question? Want to hire us?</h4>
+                  <div class="contact-info">
+                     <span>Mail</span>
+                     <h2 class="highlight"><a href="mailto:info@opensecurity.in">info@opensecurity.in</a> (<a href="/static/OpenSecurity_pub.asc">pgp</a>)</h2>
+                     <span>Phone</span>
+                     <h2 class="highlight"><a href="tel:+91-9633325997">+91-9633325997</a></h2>
+                     <span>Address</span>
+                     </br>
+                     <img src="/static/img/opensecurity-logo.png" width="40%" height="40%">
+                     <h2 class="highlight">Bangalore, India</h2>
+                     <div align="center">
+                    
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- end Contact -->
+     
+         </main>
+          <div class="cta container">
+             <h6><a href="#contact" class="button blue" data-open="contact-modal">Let's Talk</a></h6>
+         </div>
+
+          <script src="/static/js/pace.min.js"></script>
+          <script src="/static/js/jquery.min.js"></script>
+          <script src="/static/js/main.js"></script>
+          <script>
+            (function() {
+            $(document).ready(function() {
+              $('[data-gh-project]').each(function() {
+                var $proj = $(this);
+                var repo = $proj.data('gh-project');
+                $.get('https://api.github.com/repos/' + repo).success(function(data) {
+                  $proj.find('.fork a').text(data.forks_count);
+                  $proj.find('.star a').text(data.stargazers_count);
+                });
+              });
+            });
+          })();
+          </script>
+          <script>
+           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+           ga('create', 'UA-57047568-1', 'auto');
+           ga('send', 'pageview');
+         </script>
+   </body>
+</html>
